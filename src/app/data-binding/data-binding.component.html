@@ -1,0 +1,132 @@
+<div>
+  <h1>D2 - Data binding</h1>
+  <p>
+    <strong>Automatically keeps your page up-to-date with the component state</strong> <br /> 
+    - view in the page<br />
+    - model in the component class
+  </p>
+<div style="display: flex;">
+
+  <div 
+  class="box pt25">
+    View
+  </div>
+  <div class="box w200 pt20" >
+      Data Binding <br />
+      View to Model <br />
+      Model to View
+    
+  </div>
+  <div class="box pt25">
+    Model
+  </div>
+</div>
+  <h3>You use data binding to specify things such as</h3>
+  <ul>
+    <li>[src] - the source of an image</li>
+    <li>[disabled] - the state of a button</li>
+    <li>[name] - data for a particular user</li>
+  </ul>
+  <h3 style="margin-left: 20px;">HTML attributes and DOM properties</h3>
+  <h4 style="margin-left: 20px;">Angular binding distinguishes between</h4>
+  <ul>
+    <li style="font-weight: bold">HTML attributes are static string values</li>
+    <li>
+      when DOM is loaded, DOM properties are initialized with static Attribute
+      string values
+    </li>
+    <li>samples: class="selected" , button disabled img src="imgs/img1"</li>
+    <li>
+      In Angular, the only role of HTML attributes is to initialize element and
+      directive state
+    </li>
+
+    
+  </ul>
+  <ul>
+    <li style="font-weight: bold">
+      DOM properties are features of DOM nodes and are dynamic values
+    </li>
+    <li>
+      with data binding, you're dealing exclusively with the DOM properties and
+      events
+    </li>
+  </ul>
+
+  <table>
+    <th>Type</th>
+    <th>Syntax</th>
+    <th>Category</th>
+    <tr>
+      <td>
+        <ul>
+          <li>Interpolation</li>
+          <li>DOM Propery</li>
+          <li>Html Attribute</li>
+          <li>Html Class</li>
+          <li>Html Style</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>'{{expression'}}</li>
+          <li>[value]="expression"</li>
+          <li>[disabled]="expression"</li>
+          <li>[class.selected]="expression"</li>
+          <li>[style.border]="expression"</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>source to element.textContent</li>
+          <li>source to view</li>
+          <li>source to view</li>
+          <li>source to view</li>
+          <li>source to view</li>
+        </ul>
+      </td>
+
+    </tr>
+    <tr>
+      <ul>
+        <li>DOM Event</li>
+      </ul>
+      <td>
+        <ul>
+          <li>
+            (target)="statement"
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>
+            view to source
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>Two way</li>
+        </ul>
+      </td>
+      <td>
+       <ul>
+         <li>
+          [(target)]="expression"
+         </li>
+       </ul>
+      </td>
+      <td>
+        <ul>
+          <li>
+            source to view and view to source
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <router-outlet></router-outlet>
+</div>
